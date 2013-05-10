@@ -2,16 +2,16 @@ require 'rubygems'
 require 'rake/gempackagetask'
 
 spec = Gem::Specification.new do |gem|
-    gem.name = "hiera-mysql"
-    gem.version = "0.2.0"
-    gem.summary = "MySQL backend for Hiera"
-    gem.email = "craig@craigdunn.org"
-    gem.author = "Craig Dunn"
-    gem.homepage = "http://github.com/crayfishx/hiera-mysql"
-    gem.description = "Hiera back end for retrieving configuration values from MySQL"
+    gem.name = "hiera-oci8"
+    gem.version = "0.0.1"
+    gem.summary = "Oracle DB backend for Hiera"
+    gem.email = "shuff@fas.harvard.edu"
+    gem.author = "Steve Huff"
+    gem.homepage = "http://github.com/huit/hiera-oci8"
+    gem.description = "Hiera back end for retrieving configuration values from an Oracle DB"
     gem.require_path = "lib"
     gem.files = FileList["lib/**/*"].to_a
-    gem.add_dependency('mysql')
+    gem.add_dependency('ruby-oci8')
 end
 
 Rake::GemPackageTask.new(spec) do |pkg|
